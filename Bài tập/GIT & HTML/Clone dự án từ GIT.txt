@@ -1,0 +1,3 @@
+Cú pháp clone dự án từ git
+	git clone <Liên kết chứa repository cần clone>
+Ý nghĩ câu lệnh clone: git clone dùng đề sao chép một repo từ remote repository về local repository của lập trình viên
