@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>dangkyhocvien</title>
+    <meta charset="utf-8">
+</head>
+<style>
+fieldset {
+  background-color: #fde662;
+}
+</style>
+<body>
+    <form style="width: 30%;border: 1;" >
+        <fieldset>
+            <p style = "background-color: rgb(0, 255, 149); color: rgb(22, 17, 17); font-size:20px; font-family: Google Sans Serif; ">ĐĂNG KÝ HỌC VIÊN</p>
+            FullName: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" Name="Yourname"></br><br/>
+            Birthday: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="date" Name="Ngaysinh"><p>
+            Sex: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" id="male" name="Giới tính" value="Male">
+                        <label for="male">Male</label> &nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" id="female" name="Giới tính" value="Female">
+                        <label for="female">Female</label><br>
+            Address: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <textarea rows="4" cols="30" name="address"></textarea><p>
+            <label for="class">Class:</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <select name="class" id="cars">
+                <option value="ClassA">Class A</option>
+                <option value="ClassB">Class B</option>
+                </select><p>
+            Phone Number: &nbsp;&nbsp;
+            <input type="text" Name="Phone"><p>
+            <p><input type = "submit" name="btSubmit" value="Submit"/>
+            <input type = "reset" name="btreset" value="Reset"/>
+        </fieldset>
+    </form>
+</body>
+</html>
