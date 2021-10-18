@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Operations</title>
+    <meta charset="utf-8">
+    <style>
+        .box {
+            display: inline-flex;
+        }
+
+        .box,
+        span {
+            text-align: center;
+        }
+
+        .box,
+        .item {
+            margin-left: 30px;
+        }
+
+
+        .btn {
+            background-color: rgb(96, 96, 248);
+        }
+    </style>
+
+</head>
+
+<body class="container">
+
+    <div class="box">
+
+        <div class="item">
+            <span>Amount</span> <br>
+            <input type="text" id="Dauvao">
+        </div>
+
+        <div class="item">
+            <span>From Currentcy</span> <br>
+            <select name="" id="select1">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+            </select>
+        </div>
+
+        <div class="item">
+            <span>To Currentcy</span> <br>
+            <select name="" id="select2">
+                <option value="USD">USD</option>
+                <option value="VND">VND</option>
+            </select>
+        </div>
+
+        <div class="item">
+            <span></span> <br>
+            <button onclick="Convert()">Convert</button>
+        </div>
+    </div>
+    <p id="result"></p>
+
+    <script>
+        let result;
+        let convert = document.getElementById('Dauvao');
+        let value1 = document.getElementById('select1').value;
+        let value2 = document.getElementById('select2').value;
+        function Convert() {
+            if (value1 == value2) {
+                result = parseInt(convert.value) * 1;
+                document.getElementById("result").innerHTML = " <b style='color: red'> Result addition </b>" + result;
+            }
+            else if (value1 == "VND" && value2 == "USD") {
+
+                result = parseInt(convert.value) / 23000;
+                document.getElementById("result").innerHTML = " <b style='color: red'> Result addition </b>" + result;
+            }
+            else if (value1 == "USD" && value2 == "VND") {
+                result = parseInt(convert.value) * 23000;
+                document.getElementById("result").innerHTML = " <b style='color: red'> Result addition </b>" + result;
+            }
+        }
+    </script>
+</body>
+
+</html>
