@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Caculator</title>
+    <link rel="stylesheet" href="BT_Caculator.css">
+</head>
+
+<body>
+    <form style="width: 10%;border: 10;" name="calc">
+        <fieldset>
+            <input id="input" name="result" type=" text"></input>
+            <p>
+            <fieldset style="border: 1000px;">
+                <button id="btn1" type="button" value="1" onclick="calc.result.value +='1'">1</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button id="btn2" type="button" value="2" onclick="calc.result.value +='2'">2</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button id="btn3" type="button" value="3" onclick="calc.result.value +='3'">3</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button id="btnadd" type="button" class="operator" name="plus" value="+"
+                    onclick="calc.result.value +='+'">+</button>
+            </fieldset>
+            <fieldset style="border: 1000px;">
+                <button id="btn4" type="button" value="4" onclick="calc.result.value +='4'">4</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button id="btn5" type="button" value="5" onclick="calc.result.value +='5'">5</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button id="btn6" type="button" value="6" onclick="calc.result.value +='6'">6</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button id="btnsub" type="button" class="operator" name="minus" value="-"
+                    onclick="calc.result.value +='-'">-</button>
+            </fieldset>
+            <fieldset style="border: 1000px;">
+                <button id="btn7" type="button" value="7" onclick="calc.result.value +='7'">7</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button id="btn8" type="button" value="8" onclick="calc.result.value +='8'">8</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button id="btn9" type="button" value="9" onclick="calc.result.value +='9'">9</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button id="btnmutil" type="button" class="operator" name="mutil" value="*"
+                    onclick="calc.result.value +='*'">x</button>
+            </fieldset>
+            <fieldset style="border: 1000px;">
+                <button id="btnC" type="button" onclick="calc.result.value =''">C</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button id="btn0" type="button" onclick="calc.result.value +='0'">0</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button id="btnequal" type="button" onclick="calc.result.value =eval(calc.result.value)">=</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button id="btndiv" type="button" class="operator" name="div" value="/"
+                    onclick="calc.result.value +='/'">/</button>
+            </fieldset>
+        </fieldset>
+    </form>
+</body>
+
+</html>

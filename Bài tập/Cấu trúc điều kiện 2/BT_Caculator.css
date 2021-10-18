@@ -1,0 +1,31 @@
+#btn1,
+#btn2,
+#btn3,
+#btn4,
+#btn5,
+#btn6,
+#btn7,
+#btn8,
+#btn9,
+#btnC,
+#btn0,
+#btnadd,
+#btnsub,
+#btnmutil,
+#btndiv,
+#btnequal{
+color: rgb(94, 94, 245); 
+font-size: 30px; 
+width: 50px; 
+height:50px;
+border: 10;
+border-radius: 10px; 
+}
+#input{
+    color: rgb(94, 94, 245);
+     font-size: 30px; 
+     width: 300px; 
+     height:50px;
+     border: 10; 
+     border-radius: 5px;
+}
