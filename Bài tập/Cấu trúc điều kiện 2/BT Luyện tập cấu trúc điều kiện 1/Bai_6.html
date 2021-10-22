@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        let doanhSo = parseInt(prompt("Nhập doanh số bán hàng đạt được:"));
+        let hoaHong;
+        if (doanhSo <= 50) {
+            hoaHong = (5 * doanhSo / 100) * 100000;
+            alert("Với doanh số là " + doanhSo + " sản phẩm thì hoa hồng nhận được là " + hoaHong + " nghìn đồng");
+        } else if (doanhSo <= 100) {
+            hoaHong = (10 * doanhSo / 100) * 100000;
+            alert("Với doanh số là " + doanhSo + " sản phẩm thì hoa hồng nhận được là " + hoaHong + " ngìn đồng");
+        } else {
+            hoaHong = (20 * doanhSo / 100) * 100000;
+            alert("Với doanh số là " + doanhSo + " sản phẩm thì hoa hồng nhận được là " + hoaHong + " nghìn đồng")
+        }
+    </script>
+</body>
+
+</html>

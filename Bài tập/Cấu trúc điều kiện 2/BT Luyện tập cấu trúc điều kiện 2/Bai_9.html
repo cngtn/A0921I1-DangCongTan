@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        let a = parseInt(prompt("Nhập a:"));
+        let b = parseInt(prompt("Nhập b:"));
+        let c = parseInt(prompt("Nhập c:"));
+        if ((a > 0) && (b > 0) && (c > 0)) {
+            if ((a + b > c) && (a + c > b) && (b + c > a)) {
+                document.write("3 số vừa nhập là cạnh của một tam giác.");
+            } else {
+                document.write("3 số vừa nhập không là cạnh của một tam giác.");
+            }
+        } else {
+            document.write("3 số vừa nhập không là cạnh của một tam giác.");
+        }
+    </script>
+</body>
+
+</html>

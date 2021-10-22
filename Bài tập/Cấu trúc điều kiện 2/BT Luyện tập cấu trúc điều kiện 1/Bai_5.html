@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        let ktra = parseInt(prompt("Nhập điểm bài kiểm tra:"));
+        let giuaKy = parseInt(prompt("Nhập điểm thi giữa kỳ:"));
+        let cuoiKy = parseInt(prompt("Nhập điểm thi cuối kỳ"));
+        let average = (ktra + giuaKy + cuoiKy * 2) / 3;
+        if (average >= 9.0) {
+            alert("Học sinh này đạt hạng Xuất sắc");
+        } else if (average >= 8) {
+            alert("Học sinh này đạt hạng Giỏi")
+        } else if (average >= 7) {
+            alert("Học sinh này đạt hạng Khá")
+        }
+        else if (average >= 6) {
+            alert("Học sinh này đạt hạng Trung bình");
+        } else if (average >= 5) {
+            alert("Học sinh này đạt hạng Yếu");
+        } else {
+            alert("Học sinh này đạt hạng Kém");
+        }
+    </script>
+</body>
+
+</html>

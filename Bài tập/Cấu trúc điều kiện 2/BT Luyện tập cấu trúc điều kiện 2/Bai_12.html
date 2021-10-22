@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        let tienbandau = parseFloat(prompt("Nhập số tiền ban đầu:"));
+        let sothang = parseInt(prompt("Nhập số tháng:"));
+        let laicodinh = parseInt(prompt("Nhập phần trăm lãi cố định:"));
+        let tienlai = (tienbandau * laicodinh / 100) / 12 * sothang;
+        document.write("Tổng số tiền lãi nhận được là: " + tienlai);
+    </script>
+</body>
+
+</html>
