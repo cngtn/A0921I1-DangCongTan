@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+
+<body>
+    <script>
+        let number = parseInt(prompt("Nhập vào 2 số trong dãy fibonaci: "));
+        let count = 0;
+        let num1 = 0;
+        let num2 = 1;
+        var temp = 0;
+        document.write("Số đầu tiên trong dãy fibanaci chia hết cho 5 là: ")
+        while (count < number) {
+            let sum = num1 + num2;
+            num1 = num2;
+            num2 = sum;
+            count++;
+            if (num2 % 5 == 0) {
+                document.write(num2);
+                break;
+            }
+        }
+        //document.write(temp);
+    </script>
+</body>
+
+</html>
