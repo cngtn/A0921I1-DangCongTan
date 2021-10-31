@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script>
+        //Goc 1
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j <= i; j++) {
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+        document.write("<br><br>");
+        //Goc 2
+        for (let i = 0; i < 5; i++) {
+            for (let j = 5; j > i; j--) {
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+        document.write("<br><br>");
+        //Goc 3
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5; j++) {
+                if ((i == 0 && (j == 0 || j == 1 || j == 2 || j == 3))
+                    || (i == 1 && (j == 0 || j == 1 || j == 2))
+                    || (i == 2 && (j == 0 || j == 1))
+                    || (i == 3 && (j == 0))) {
+                    document.write("&nbsp;&nbsp;");
+                } else {
+                    document.write("*");
+                }
+            }
+            document.write("<br>");
+        }
+        document.write("<br><br>");
+        //Goc 4
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5; j++) {
+                if ((i == 4 && (j == 0 || j == 1 || j == 2 || j == 3))
+                    || (i == 3 && (j == 0 || j == 1 || j == 2))
+                    || (i == 2 && (j == 0 || j == 1))
+                    || (i == 1 && (j == 0))) {
+                    document.write("&nbsp;&nbsp;");
+                } else {
+                    document.write("*");
+                }
+            }
+            document.write("<br>");
+        }
+        document.write("<br><br>");
+    </script>
+</body>
+
+</html>

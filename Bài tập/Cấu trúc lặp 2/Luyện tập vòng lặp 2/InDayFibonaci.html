@@ -4,22 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-
 </head>
 
 <body>
     <script>
-        let number = parseInt(prompt("Nhập vào " + number + " số dãy số fibonaci là: "));
-        let count = 0;
+        let number;
         let num1 = 0;
         let num2 = 1;
-        document.write(number + " Số đầu tiên trong dãy fibonaci là: ")
-        while (count < number) {
+        n = parseInt(prompt("Nhập vào " + number + " số dãy số fibonaci là: "));
+        document.write("Dãy Fibonaci với " + n + " số là: ");
+        for (let i = 1; i <= n; i++) {
             document.write(num2 + " ");
             let sum = num1 + num2;
             num1 = num2;
             num2 = sum;
-            count++;
         }
     </script>
 </body>
