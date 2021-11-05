@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script>
+        let arr = [1, 3, 6, 14, 32, 26, 6, 2, 9, 24];
+        let V = parseInt(prompt("Nhập vào V:"));
+        let check = false;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == V) {
+                check = true;
+            }
+        }
+        if (check == true) {
+            document.write("V có trong mảng.");
+        } else {
+            document.write("V không có trong mảng.");
+        }
+    </script>
+</body>
+
+</html>

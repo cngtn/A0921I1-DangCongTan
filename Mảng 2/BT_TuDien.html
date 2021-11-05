@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+
+<body>
+    <h2>Từ điển Anh - Việt</h2>
+    <input type="text" id="txtString" style="width: 300px">
+    <input type="button" id="btnFind" value="Tra từ" onclick="find()">
+    <p id="result"></p>
+    <script>
+        let ENG = ["Cat", "Dog", "Duck", "Chicken", "Mouse", "House"];
+        let VIE = ["Con mèo", "Con chó", "Con vịt", "Con gà", "Con chuột", "Ngôi nhà"];
+        let str = document.getElementById("txtString");
+        function find() {
+            for (let i = 0; i < ENG.lENGth; i++) {
+                let strFind = str.value;
+                if (ENG[i] == strFind) {
+                    document.getElementById("result").innerHTML = VIE[i];
+                    break;
+                } else {
+                    alert("Not find.");
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
