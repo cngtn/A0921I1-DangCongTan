@@ -1,0 +1,28 @@
+<!-- Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. Nếu là ký tự số hàm trả về true, ngược lại trả về false. -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script>
+        function checkNumber(str) {
+            var i;
+            for (i = 0; i < str.length; i++) {
+                if (str.charAt(i) < "0" || str.charAt(i) > "9") {
+                    return false;
+                }
+            }
+            return true;
+        }
+        var str = prompt("Nhập vào 1 chuỗi: ");
+        if (checkNumber(str)) {
+            alert("Chuỗi nhập vào là số");
+        } else {
+            alert("Chuỗi nhập vào không phải là số");
+        }
+    </script>
+</body>

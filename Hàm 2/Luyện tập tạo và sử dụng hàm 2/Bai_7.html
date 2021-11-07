@@ -1,0 +1,23 @@
+<!-- Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó. -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script>
+        function swap(a, b) {
+            var temp = a;
+            a = b;
+            b = temp;
+            return [a, b];
+        }
+        var a = prompt("Nhập số a: ");
+        var b = prompt("Nhập số b: ");
+        document.write("Số a và số b ban đầu là: " + a + " và " + b + "<br>");
+        document.write("Số a và số b sau khi đổi chỗ là: " + swap(a, b));
+    </script>
+</body>

@@ -1,0 +1,23 @@
+<!-- Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không. Nếu là nguyên dương trả về true,
+ngược lại trả về false -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script>
+        function check(number) {
+            if (number > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        let number = prompt("Nhập số cần kiểm tra");
+        document.write(check(number));
+    </script>
+</body>

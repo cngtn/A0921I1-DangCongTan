@@ -1,0 +1,24 @@
+<!-- Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script>
+        function tinhDienTichHinhTron(r) {
+            return Math.PI * r * r;
+        }
+
+        function tinhChuViHinhTron(r) {
+            return 2 * Math.PI * r;
+        }
+
+        var r = prompt("Nhập bán kính hình tròn: ");
+        document.write("Diện tích hình tròn là: " + tinhDienTichHinhTron(r) + "<br>");
+        document.write("Chu vi hình tròn là: " + tinhChuViHinhTron(r));
+    </script>
+</body>

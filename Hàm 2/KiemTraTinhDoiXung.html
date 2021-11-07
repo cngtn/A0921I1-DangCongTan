@@ -1,0 +1,30 @@
+<!-- Xây dựng chương trình sử dụng đệ quy để kiểm tra một từ có phải là từ đối xứng không. -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script>
+        function isPalindrome(str) {
+            var str1 = str.split("");
+            var str2 = str.split("");
+            str1.reverse();
+            str2 = str2.join("");
+            if (str == str2) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        var str = prompt("Nhập vào 1 chuỗi: ");
+        if (isPalindrome(str)) {
+            alert("Đây là từ đối xứng");
+        } else {
+            alert("Đây không phải là từ đối xứng");
+        }
+    </script>
+</body>

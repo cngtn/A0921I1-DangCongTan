@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Chuyển đổi đơn vị tính</title>
+</head>
+
+<body>
+    <script>
+        function footToMeter(foot) {
+            var meter = foot * 0.305;
+            return meter;
+        }
+        function meterToFoot(meter) {
+            var foot = meter * 3.279;
+            return foot;
+        }
+        // let foot = parseInt(prompt("Nhập số foot"));
+        // let meter = footToMeter(foot);
+        // document.write("Số meter: " + meter + "<br>");
+        let meter = parseInt(prompt("Nhập số meter"));
+        let foot = meterToFoot(meter);
+        document.write("Số foot: " + foot);
+    </script>
+</body>

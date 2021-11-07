@@ -1,0 +1,30 @@
+<!-- Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không. Nếu có
+trả về số lần xuất hiện của ký tự đó, nếu không trả về -1. -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script>
+        function checkChar(arr, char) {
+            var count = 0;
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] == char) {
+                    count++;
+                }
+            }
+            if (count == 0) {
+                return -1;
+            } else {
+                return count;
+            }
+        }
+        var arr = ['a', 'b', 'e', 'f', 'b', 'c', 'l', 'm', 'r', 's', 'm', 'c', '4', '2', 't', 'x', 'y', 'z'];
+        var char = prompt("Nhập ký tự cần kiểm tra");
+        alert(checkChar(arr, char));
+    </script>
+</body>

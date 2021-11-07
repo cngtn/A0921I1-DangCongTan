@@ -1,0 +1,22 @@
+<!-- Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được. -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script>
+        function factorial(n) {
+            if (n == 0) {
+                return 1;
+            } else {
+                return n * factorial(n - 1);
+            }
+        }
+        let n = parseInt(prompt("Nhập số nguyên cần tính giai thừa"));
+        document.write(factorial(n));
+    </script>
+</body>
