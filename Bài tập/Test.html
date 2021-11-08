@@ -12,7 +12,42 @@ Xác định người chiến thằng nhập giá trị có 3 ô liên tiếp gi
 </head>
 
 <body>
+    <h1>Caro</h1>
+    <table>
+        <tr>
+            <td>
+                <input type="button" value="X" id="X" onclick="X()">
+            </td>
+            <td>
+                <input type="button" value="O" id="O" onclick="O()">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="X" id="X" onclick="X()">
+            </td>
+            <td>
+                <input type="button" value="O" id="O" onclick="O()">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="X" id="X" onclick="X()">
+            </td>
+            <td>
+                <input type="button" value="O" id="O" onclick="O()">
+            </td>
+        </tr>
+    </table>
+    <script>
+        function X() {
+            document.getElementById("X").value = "X";
+        }
 
+        function O() {
+            document.getElementById("O").value = "O";
+        }
+    </script>
 </body>
 
 </html>
