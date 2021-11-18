@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Remote {
+        constructor(ma) {
+            this.ma = ma;
+        }
+
+        getma() {
+            return this.ma;
+        }
+
+        setma(value) {
+            this.ma = value;
+        }
+
+        turnTVProgram(tv, number) {
+            if (this.ma === tv.ma) {
+                tv.adjustTVProgram(number);
+            }
+        }
+
+        turnVolume(tv, number) {
+            if (this.ma === tv.ma) {
+                tv.adjustVol(number);
+            }
+        };
+    }
+
+
+    class TiVi {
+        constructor(ma) {
+            this.ma = ma;
+            this.tvProgram = 1;
+            this.volume = 15;
+            this.isOn = false;
+        }
+
+        turnTV() {
+            if (this.isOn) {
+                this.isOn = false;
+                document.write("Turn off the TV <br>");
+            } else {
+                this.isOn = true;
+                document.write("Turn on the TV <br>");
+            }
+        }
+
+        adjustTVProgram(number) {
+            if (this.isOn) {
+                this.tvProgram = number;
+                document.write("TV chuyển sang kênh " + this.tvProgram + "<br>");
+            } else {
+                document.write("TV đang tắt !<br>");
+            }
+        };
+
+        adjustVol(number) {
+
+            if (this.isOn) {
+                number = Number(number);
+                this.volume += number;
+                document.write("Âm lượng: " + this.volume + "<br>");
+            } else {
+                document.write("TV đang tắt ! <br>");
+            }
+        }
+    };
+
+    let samsung = new TiVi(100);
+    alert(samsung);
+    samsung.turnTV();
+    samsung.adjustTVProgram(7);
+
+    let ssRemote = new Remote(100);
+    ssRemote.turnTVProgram(samsung, 3);
+    ssRemote.turnVolume(samsung, 5);
+    samsung.turnTV();
+
+
+</script>
+</body>
+</html>

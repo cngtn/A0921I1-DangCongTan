@@ -1,0 +1,50 @@
+<!-- 
+Viết một lớp các đối tượng hình chữ nhật lấy tên là Rectangle, mỗi hình chữ nhật đều có những đặc tính sau:
+
++ Có thông số chiều dài (int).
+
++ Có thông số chiều rộng (int).
+
++ Có tính năng tính diện tích.
+
++ Có tính năng tính chu vi.
+
++ Có tính năng hiển thị trực quan hình chữ nhật bằng cách vẽ lên canvas -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Xây dựng lớp chữ nhật</title>
+
+<body>
+    <h1>Xây dựng lớp hình tròn</h1>
+    <script>
+        class rectangle {
+            constructor(width, height) {
+                this.width = width;
+                this.height = height;
+            }
+            getArea() {
+                return this.width * this.height;
+            }
+            getPerimeter() {
+                return (this.width + this.height) * 2;
+            }
+            draw() {
+                var canvas = document.getElementById('canvas');
+                var ctx = canvas.getContext('2d');
+                ctx.fillStyle = 'red';
+                ctx.fillRect(0, 0, this.width, this.height);
+            }
+        };
+        let rect = new rectangle(100, 200);
+        document.write("Diện tích hình chữ nhật là: " + rect.getArea() + "<br>");
+        document.write("Chu vi hình chữ nhật là: " + rect.getPerimeter() + "<br>");
+        rect.draw();
+
+    </script>
+</body>
+</head>
+
+</html>

@@ -1,9 +1,3 @@
-<!-- Xây dựng game caro đơn giản sử dụng phần thực hành về tạo bàn cờ caro. Bàn cờ thay vì số 0 hiển thị mặc định bằng dấu
-(.).
-
-Có 2 người chơi lần lượt nhập vào là X và O. Mỗi lần giá trị được nhập vào thì bàn cờ thay đổi giá trị theo người chơi.
-
-Xác định người chiến thằng nhập giá trị có 3 ô liên tiếp giống nhau. -->
 <!DOCTYPE html>
 <html>
 
@@ -12,41 +6,16 @@ Xác định người chiến thằng nhập giá trị có 3 ô liên tiếp gi
 </head>
 
 <body>
-    <h1>Caro</h1>
-    <table>
-        <tr>
-            <td>
-                <input type="button" value="X" id="X" onclick="X()">
-            </td>
-            <td>
-                <input type="button" value="O" id="O" onclick="O()">
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                <input type="button" value="X" id="X" onclick="X()">
-            </td>
-            <td>
-                <input type="button" value="O" id="O" onclick="O()">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input type="button" value="X" id="X" onclick="X()">
-            </td>
-            <td>
-                <input type="button" value="O" id="O" onclick="O()">
-            </td>
-        </tr>
-    </table>
     <script>
-        function X() {
-            document.getElementById("X").value = "X";
-        }
+        var x = 2;
+        var y = [1, 2, 3, 4, 5];
+        var z = [6, 7, 8, 9, 10, 11];
 
-        function O() {
-            document.getElementById("O").value = "O";
+        if (y[x] + z[x - 1] == z[x + 2]) {
+            console.log('Codegym');
+        }
+        else {
+            console.log('Agilead');
         }
     </script>
 </body>

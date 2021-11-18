@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <h1>Mụt câu chiện kảm động về chiện tình Adam và Eva với quả táo cắn dở.!!!</h1>
+    <script>
+        class Apple {
+            constructor(weight = 10) {
+                this._weight = weight;
+            }
+
+            decrease() {
+                return --this._weight;
+            }
+
+            getWeight() {
+                return this._weight;
+            }
+
+            isEmpty() {
+                return true;
+            }
+
+        }
+
+        class Human {
+            constructor(name, gender, weight) {
+                this._name = name;
+                this._gender = gender;
+                this._weight = weight;
+            }
+
+            getName() {
+                return this._name;
+            }
+
+            setName(value) {
+                this._name = value;
+            }
+
+            getGender() {
+                return this._gender;
+            }
+
+            setGender(boolean) {
+                this._gender = boolean;
+            }
+
+            getWeight() {
+                return this._weight;
+            }
+
+            setWeight(value) {
+                this._weight = value;
+            }
+
+            isMale() {
+                if (this._gender === "Nam")
+                    return true;
+                else
+                    return false;
+            }
+
+            checkApple(apple) {
+                return apple.getWeight();
+            }
+
+            eat(apple) {
+                return apple.decrease();
+            }
+
+            say(string) {
+                document.write(this._name + " đã nói : " + string + "<br>");
+            }
+        }
+
+        let apple = new Apple();
+        let adam = new Human("Adam", "Nam", 60);
+        let eva = new Human("Eva", "Nữ", 45);
+        document.write(adam.getName() + " và " + eva.getName() + " đang ngồi dưới gốc cây táo trong vườn địa đàng." + "</br>");
+        document.write(adam.getName() + " là " + adam.getGender() + " và nặng " + adam.getWeight() + "kg. </br>");
+        document.write(eva.getName() + " là " + eva.getGender() + " và nặng " + eva.getWeight() + "kg. </br>");
+        if (apple.getWeight() > 0) {
+            document.write("Có một quả táo rơi xuống. " + adam.getName() + " nhìn thấy quả táo đó.");
+            document.write(adam.getName() + " liền cầm quả táo lên cắn 1 miếng.</br>");
+            adam.setWeight(adam.getWeight() + 1);
+            document.write("Cân nặng của " + adam.getName() + " liền tăng lên thành " + adam.getWeight() + "kg. </br>");
+            document.write("Khối lượng quả táo lúc này: " + adam.eat(apple) + "kg. </br>");
+            document.write(adam.getName() + " thấy quả táo này thần kì quá nên đã cắn liên tục 9 lần.</br>");
+            for (let i = 2; i <= 10; i++) {
+                adam.eat(apple);
+            }
+            document.write("Kết quả khối lượng của quả táo còn lại là " + apple.getWeight() + "kg. </br>");
+            adam.setWeight(adam.getWeight() + 9);
+            document.write("Cân nặng của " + adam.getName() + " tăng lên thành " + adam.getWeight() + ".</br>");
+        }
+        if (apple.getWeight() == 0) {
+            document.write("Vừa lúc đó " + eva.getName() + " quay qua và thấy " + adam.getName() + " đã ăn hết quả táo mà không cho " + eva.getName() + " ăn cùng.</br>");
+            document.write("Nên " + eva.getName() + " đã giận " + adam.getName() + ". </br>");
+            document.write(adam.getName() + " thấy vậy liền leo lên cây hái xuống một quả cho " + eva.getName() + ". </br>");
+            document.write("Nhưng " + eva.getName() + " đã cầm và ném xuống đất. </br>");
+            eva.say(" mình chia tay đi. ");
+            adam.say(" ok vậy thì chia tay. ");
+            document.write("Và kết cục là họ chia tay nhau, đường ai nấy đi. </br>");
+        }
+
+
+
+    </script>
+</body>
+
+</html>

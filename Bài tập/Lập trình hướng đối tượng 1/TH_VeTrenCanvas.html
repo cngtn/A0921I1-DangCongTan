@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="400" height="200" style="border: 1px solid"></canvas>
+
+
+    <script>
+        /**
+         * Vẽ hình chữ nhật
+         */
+        let canvas = document.getElementById("canvas");
+        let ctx = canvas.getContext("2d");
+        ctx.fillStyle = "blue";
+        ctx.fillRect(50, 50, 200, 100);
+
+        /**
+         * Vẽ hình tròn
+         */
+        // let canvas = document.getElementById("canvas");
+        // let ctx = canvas.getContext("2d");
+        // ctx.beginPath();
+        //Vẽ nữa trên hình tròn
+        //ctx.arc(200, 100, 100, Math.PI, Math.PI * 2);
+
+        //Vẽ nữa dưới hình tròn
+        //ctx.arc(200, 100, 100, 0, Math.PI);
+
+        //Vẽ toàn bộ hình tròn
+        //ctx.arc(200, 100, 100, 0, Math.PI * 2);
+        ctx.stroke();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Remote TV</title>
+</head>
+
+<body>
+    <script>
+        // Viết một lớp mô tả đối tượng điều khiển từ xa tivi lấy tên là Remote với những đặc điểm như sau:
+        // Có thuộc tính mã.
+        // Có tính năng điều khiển chuyển kênh.
+        // Có tính năng điều khiển âm lượng.
+        class Remote {
+            constructor(name) {
+                this.name = name;
+            }
+            get name() {
+                return this.name;
+            }
+            set name(value) {
+                this.name = value;
+            }
+            changeChannel(channel) {
+                document.write(`${this.name} đang chuyển đến kênh ${channel}`);
+            }
+            changeVolume(volume) {
+                document.write(`${this.name} đang chuyển đến âm lượng ${volume}`);
+            }
+        }
+        // Viết một lớp mô tả đối tượng tivi lấy tên là TiVi với những đặc điểm sau:
+        // Có thuộc tính mô tả kênh hiện thời đang phát.
+        // Có thuộc tính mô tả âm lượng hiện thời
+        // Có thuộc tính mô tả trạng thái bật, tắt.
+        // Có tính năng điều khiển chuyển đến kênh nào đó.
+        // Có tính năng điều khiển âm lượng.
+        class TiVi {
+            constructor(name) {
+                this.name = name;
+                this.channel = 1;
+                this.volume = 50;
+                this.status = false;
+            }
+            getName() {
+                return this.name;
+            }
+            setName(name) {
+                this.name = name;
+            }
+            getChannel() {
+                return this.channel;
+            }
+            setChannel(channel) {
+                this.channel = channel;
+            }
+            getVolume() {
+                return this.volume;
+            }
+            setVolume(volume) {
+                this.volume = volume;
+            }
+            getStatus() {
+                return this.status;
+            }
+            setStatus(status) {
+                this.status = status;
+            }
+            changeChannel(channel) {
+                this.channel = channel;
+                document.write(`${this.name} đang chuyển đến kênh ${channel}`);
+            }
+            changeVolume(volume) {
+                this.volume = volume;
+                document.write(`${this.name} đang chuyển âm lượng lên ${volume}`);
+            }
+            turnOn() {
+                this.status = true;
+                document.write(`${this.name} đang bật`);
+            }
+            turnOff() {
+                this.status = false;
+                document.write(`${this.name} đang tắt`);
+            }
+        };
+        // Viết một chương trình sử dụng Remote để điều khiển TiVi theo kịch bản như sau:
+        // Khai báo và khởi tạo một chiếc Tivi.
+        // Khai báo và khởi tạo một chiếc Remote.
+        // Bật tivi.
+        // Chuyển đến kênh 7.
+        // Dùng remote chuyển đến kênh 3.
+        // Tăng âm lượng lên 2 đơn vị.
+        // Dùng remote tắt tivi.
+        let tv = new TiVi('Tivi');
+        let remote = new Remote('Remote');
+        tv.turnOn();
+        tv.changeChannel(7);
+        remote.changeChannel(3);
+        tv.changeVolume(2);
+        tv.turnOff();
+    </script>
+</body>
+
+</html>

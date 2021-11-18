@@ -1,0 +1,69 @@
+<!-- Xây dựng lớp Date -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xây dựng lớp Date</title>
+</head>
+
+<body>
+    <!-- Cài đặt thêm phương thức setDate() để thiết đặt lại ngày, tháng, năm cho đối tượng MyDate và phương thức toString() để
+    trả về chuỗi ngày tháng năm theo định dạng dd/mm/yyyy. -->
+    <script>
+        class MyDate {
+            constructor(day, month, year) {
+                this.day = day;
+                this.month = month;
+                this.year = year;
+            }
+            getDay() {
+                return this.day;
+            }
+            getMonth() {
+                return this.month;
+            }
+            getYear() {
+                return this.year;
+            }
+            setDay(day) {
+                this.day = day;
+            }
+            setMonth(month) {
+                this.month = month;
+            }
+            setYear(year) {
+                this.year = year;
+            }
+            toString() {
+                return ("Ngày/Tháng/Năm: " + this.day + "/" + this.month + "/" + this.year);
+            }
+            setDate(day, month, year) {
+                this.day = day;
+                this.month = month;
+                this.year = year;
+            }
+        }
+
+        // let date = new MyDate(2, 2, 2007);
+        // let day = date.getDay();
+        // let month = date.getMonth();
+        // let year = date.getYear();
+
+        // document.write(day + "/" + month + "/" + year);
+
+        // date.setDay(10);
+        // date.setMonth(10);
+        // date.setYear(2019);
+
+        // document.write("<br>" + day + "/" + month + "/" + year);
+
+        let date = new MyDate();
+        date.setDate(6, 9, 2021);
+        document.write(date.toString());
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!-- Ví dụ mô phỏng sự hoạt động của một chiếc đèn pin. Trong ví dụ này ta có 2 lớp đối tượng cơ bản là Đèn (FlashLamp) và
+Pin (Battery). Đối tượng pin mang trong mình thông tin về trạng thái năng lượng của nó, đối tượng đèn sẽ sử dụng một đối
+tượng pin để cung cấp năng lượng cho hoạt động chiếu sáng, khi đó ta nói có sự tương tác và trao đổi thông tin giữa hai
+đối tượng đèn và pin. -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Xây dựng lớp mô phỏng sự hoạt động của một chiếc đèn pin</title>
+</head>
+
+<body>
+    <h1>Xây dựng lớp mô phỏng sự hoạt động của một chiếc đèn pin</h1>
+    <script>
+        class Battery {
+            constructor(energy) {
+                this.energy = energy;
+            }
+            setEnergy(energy) {
+                this.energy = energy;
+            }
+            getEnergy() {
+                return this.energy;
+            }
+            decreaseEnergy(energy) {
+                if (this.energy > 0) {
+                    this.energy--;
+                }
+            }
+        };
+        class FlashLamp {
+            constructor(battery) {
+                this.battery = battery;
+            }
+            setBattery(battery) {
+                this.battery = battery;
+            }
+            getBatteryInfo() {
+                return this.battery.getEnergy();
+            }
+
+            light() {
+                if (this.status) {
+                    alert("Đèn đang chạy");
+                } else {
+                    alert("Đèn không chạy");
+                }
+            }
+            turnOn() {
+                this.status = true;
+            }
+            turnOff() {
+                this.status = false;
+            }
+        };
+        let battery = new Battery();
+        battery.setEnergy(10);
+
+
+        let flashLamp = new FlashLamp();
+        flashLamp.setBattery(battery);
+
+        document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
+        flashLamp.light();
+
+        document.write("Turn on<br/>")
+        flashLamp.turnOn();
+        flashLamp.light();
+        battery.decreaseEnergy(10);
+        document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
+
+        document.write("Turn off<br/>")
+        flashLamp.turnOff();
+        flashLamp.light();
+    </script>
+</body>
+
+</html>

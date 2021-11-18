@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script>
+        class Rat {
+            constructor(name, weight, speed, state) {
+                this._name = name;
+                this._weight = weight;
+                this._speed = speed;
+                this._state = state;
+            }
+
+            getName() {
+                return this._name;
+            }
+
+            setName(value) {
+                this._name = value;
+            }
+
+            getWeight() {
+                return this._weight;
+            }
+
+            setWeight(value) {
+                this._weight = value;
+            }
+
+            getSpeed() {
+                return this._speed;
+            }
+
+            setSpeed(value) {
+                this._speed = value;
+            }
+
+            getState() {
+                return this._state;
+            }
+
+            setState(value) {
+                this._state = value;
+            }
+
+            growl() {
+                document.write(name + " chit chit </br>");
+            }
+        }
+
+        class Cat {
+
+            constructor(name, weight, speed) {
+                this._name = name;
+                this._weight = weight;
+                this._speed = speed;
+            }
+
+            getName() {
+                return this._name;
+            }
+
+            setName(value) {
+                this._name = value;
+            }
+
+            getWeight() {
+                return this._weight;
+            }
+
+            setWeight(value) {
+                this._weight = value;
+            }
+
+            getSpeed() {
+                return this._speed;
+            }
+
+            setSpeed(value) {
+                this._speed = value;
+            }
+
+            growl() {
+                document.write(name + " meo meo </br>");
+            }
+
+            catch(rat) {
+                if (this._speed > rat._speed) {
+                    document.write(this._name + " caught " + rat._name + "</br>");
+                } else {
+                    document.write(this._name + " did't catch " + rat._name + "</br>");
+                }
+            }
+
+            eat(rat) {
+                if (rat._state) {
+                    this._weight += rat._weight;
+                    document.write(this._name + " eat " + rat._name);
+                } else {
+                    document.write(this._name + "can not eat " + rat._name);
+                }
+            }
+        }
+
+        let tom = new Cat("Tom", 15, 30);
+        let jerry = new Rat("Jerry", 1, 35, true);
+        document.writeln("Cat is catching rat</br>");
+        document.writeln(tom.getName() + "speed:" + tom.getSpeed() + "</br>");
+        document.writeln(jerry.getName() + "speed:" + jerry.getSpeed() + "</br>");
+        tom.catch(jerry);
+        tom.setSpeed(tom.getSpeed() + 6);
+        document.writeln("----------------------</br>");
+        tom.catch(jerry);
+        jerry.setState(false);
+        document.writeln("Weight: " + tom.getWeight());
+        tom.eat(jerry);
+        document.writeln("Weight: " + tom.getWeight());
+    </script>
+</body>
+
+</html>
