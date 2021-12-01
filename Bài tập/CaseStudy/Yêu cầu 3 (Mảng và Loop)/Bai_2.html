@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script>
+        let A = [7, 2, 5, 3, 5, 3];
+        let B = [7, 2, 5, 4, 6, 3, 5, 3];
+        let missingValue = [];
+        for (let i = 0; i < B.length; i++) {
+            let check = false;
+            for (let j = 0; j < A.length; j++) {
+                if (B[i] == A[j]) {
+                    check = true;
+                    break;
+                }
+            }
+            if (check == false) {
+                missingValue.push(B[i]);
+            }
+        }
+        document.write(missingValue);
+    </script>
+</body>
+
+</html>

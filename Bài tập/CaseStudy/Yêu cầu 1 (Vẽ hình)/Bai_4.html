@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script>
+        for (var i = 0; i <= 5; i++) {
+            for (var j = 0; j <= 9; j++) {
+                if ((i == 1 && j == 5) ||
+                    (i == 2 && (j == 4 || j == 6)) ||
+                    (i == 3 && (j == 3 || j == 7)) ||
+                    (i == 4 && (j == 2 || j == 8)) ||
+                    (i == 5 && (j == 1 || j == 2 || j == 3 || j == 4 || j == 5 || j == 6 || j == 7 || j == 8 || j == 9))) {
+                    document.write("* ");
+                } else {
+                    document.write("&nbsp;&nbsp;&nbsp;");
+                    ;
+                }
+
+            } document.write("<br>")
+        }
+    </script>
+</body>
+
+</html>

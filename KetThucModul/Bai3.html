@@ -1,0 +1,109 @@
+<!-- Hãy khai báo class để biểu diễn thông tin của một sổ tiết kiệm (SOTIETKIEM). Biết rằng một sổ tiết kiệm gồm những thành
+phần sau:
+● Mã sổ: chuỗi tối đa 5 ký tự
+● Loại tiết kiệm: chuỗi tối đa 10 ký tự
+● Họ tên khách hàng: chuỗi tối đa 30 ký tự
+● Chứng minh nhân dân: Kiểu số
+● Ngày mở sổ: Kiểu chuỗi ( đúng format ngày)
+● Số tiền gửi: kiểu số -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Bài 3</title>
+</head>
+
+<body>
+    <form>
+        <button onclick="addSoTietKiem()">Thêm sổ tiết kiệm</button>
+        <button onclick="delSoTietKiem()">Xoá sổ tiết kiệm</button>
+    </form>
+    <script>
+        class SoTietKiem {
+            constructor(maSo, loaiTietKiem, hoTenKhachHang, soCMND, ngayMoSo, soTienGui) {
+                this.maSo = maSo;
+                this.loaiTietKiem = loaiTietKiem;
+                this.hoTenKhachHang = hoTenKhachHang;
+                this.soCMND = soCMND;
+                this.ngayMoSo = ngayMoSo;
+                this.soTienGui = soTienGui;
+            }
+            getmaSo() {
+                return this.maSo;
+            }
+            getloaiTietKiem() {
+                return this.loaiTietKiem;
+            }
+            gethoTenKhachHang() {
+                return this.hoTenKhachHang;
+            }
+            getsoCMND() {
+                return this.soCMND;
+            }
+            getngayMoSo() {
+                return this.ngayMoSo;
+            }
+            getsoTienGui() {
+                return this.soTienGui;
+            }
+            setmaSo(maSo) {
+                this.maSo = maSo;
+            }
+            setloaiTietKiem(loaiTietKiem) {
+                this.loaiTietKiem = loaiTietKiem;
+            }
+            sethoTenKhachHang(hoTenKhachHang) {
+                this.hoTenKhachHang = hoTenKhachHang;
+            }
+            setsoCMND(soCMND) {
+                this.soCMND = soCMND;
+            }
+            setngayMoSo(ngayMoSo) {
+                this.ngayMoSo = ngayMoSo;
+            }
+            setsoTienGui(soTienGui) {
+                this.soTienGui = soTienGui;
+            }
+        };
+        let sotietkiem = new SoTietKiem();
+        let arrSoTietKiem = [];
+
+        function addSoTietKiem() {
+            let maSo = prompt("Nhập mã sổ: ");
+            let loaiTietKiem = prompt("Nhập loại tiết kiệm: ");
+            let hoTenKhachHang = prompt("Nhập họ tên khách hàng: ");
+            let soCMND = Number(prompt("Nhập chứng minh nhân dân: "));
+            let ngayMoSo = (prompt("Nhập ngày mở sổ: "));
+            let soTienGui = Number(prompt("Nhập số tiền gửi: "));
+            alert("Đã thêm thành công.")
+            sotietkiem.setmaSo(maSo);
+            sotietkiem.setloaiTietKiem(loaiTietKiem);
+            sotietkiem.sethoTenKhachHang(hoTenKhachHang);
+            sotietkiem.setsoCMND(soCMND);
+            sotietkiem.setngayMoSo(ngayMoSo);
+            sotietkiem.setsoTienGui(soTienGui);
+            arrSoTietKiem.push(sotietkiem);
+            for (let i = 0; i < arrSoTietKiem.length; i++) {
+                document.write("Mã số: " + arrSoTietKiem[i].getmaSo() + "<br>");
+                document.write("Loại tiết kiệm: " + arrSoTietKiem[i].getloaiTietKiem() + "<br>");
+                document.write("Họ tên khách hàng: " + arrSoTietKiem[i].gethoTenKhachHang() + "<br>");
+                document.write("Số CMND: " + arrSoTietKiem[i].getsoCMND() + "<br>");
+                document.write("Ngày mở sổ: " + arrSoTietKiem[i].getngayMoSo() + "<br>");
+                document.write("Số tiền gửi: " + arrSoTietKiem[i].getsoTienGui() + "<br>");
+            }
+        };
+        function delSoTietKiem() {
+            let maSo = prompt("Nhập mã sổ cần xóa: ");
+            for (let i = 0; i < arrSoTietKiem.length; i++) {
+                if (arrSoTietKiem[i].getmaSo() == maSo) {
+                    arrSoTietKiem.splice(i, 1);
+                    alert("Đã xóa thành công.")
+                }
+            }
+        };
+    </script>
+
+</body>
+
+</html>

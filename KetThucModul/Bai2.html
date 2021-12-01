@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Bài 2</title>
+</head>
+
+<body>
+    <script>
+        let a = prompt("Nhập tử số của phân số thứ nhất: ");
+        let b = prompt("Nhập mẫu số của phân số thứ nhất: ");
+        let c = prompt("Nhập tử số của phân số thứ hai: ");
+        let d = prompt("Nhập mẫu số của phân số thứ hai: ");
+        function check(a, b, c, d) {
+            if (a * d == b * c) {
+                return "Hai phân số đã nhập bằng nhau.";
+            } else {
+                return "Hai phân số đã nhập không bằng nhau.";
+            }
+        };
+        alert(check(a, b, c, d));
+    </script>
+</body>
+
+</html>

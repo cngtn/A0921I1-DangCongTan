@@ -1,22 +1,78 @@
+<!-- Xây dựng ứng dụng cho phép khách hàng thực hiện mua vé số tương tự VIETLOT, mỗi vé sẽ bao gồm 6 số nguyên dương, có thể
+mua tối đa 4 vé.
+Viết chương trình cho phép người dùng mua vé số. Sẽ có hai tuỳ chọn cho khách hàng thực hiện chọn số trên mỗi vé.
+- Nếu khách hàng chọn tự nhập thì cứ mỗi ô tròn KH click vào sẽ hiển thị 1 bảng chọn số từ 0-99
+- Nếu khách hàng chọn tuỳ chọn random thì hệ thống sẽ tự động tạo ra 6 số tương ứng 6 ô tròn
+Sau khi khách hàng hoàn tất việc chọn số trên vé thì nhấn hoàn tất để thực hiện quay số
+Hệ thống sẽ so khớp dãy số trên vé với dãy số của hệ thống xem KH có trúng thưởng không
+Sẽ có 3 giải bao gồm:
+Giải nhất: 6 số trên vé của KH trùng khớp hoàn toàn với 6 số của hệ thống
+Giải nhì: 5 số cuối của vé KH trùng khớp với 5 số cuối của hệ thống
+Giải khuyến khích: 3 số cuối của vé KH trùng khớp với 3 số cuối của hệ thống
+Khi KH may mắn trúng giải nào thì hệ thống sẽ hiển thị kết quả là số tiền sẽ nhận được tương ứng (HV tự defined)
+Khi KH không trúng giải nào thì hệ thống hiển thị thông báo “Chúc bạn may mắn lần sau” -->
+
+
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>Test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Đặt thức uống</title>
 </head>
 
 <body>
-    <script>
-        var x = 2;
-        var y = [1, 2, 3, 4, 5];
-        var z = [6, 7, 8, 9, 10, 11];
 
-        if (y[x] + z[x - 1] == z[x + 2]) {
-            console.log('Codegym');
+    <script>
+        //Tạo 1 lớp với tên vé số với 6 số nguyên dương
+        class VESO {
+            constructor(a, b, c, d, e, f) {
+                this.a = a;
+                this.b = b;
+                this.c = c;
+                this.d = d;
+                this.e = e;
+                this.f = f;
+            }
+            geta() {
+                return this.a;
+            }
+            getb() {
+                return this.b;
+            }
+            getc() {
+                return this.c;
+            }
+            getd() {
+                return this.d;
+            }
+            gete() {
+                return this.e;
+            }
+            getf() {
+                return this.f;
+            }
+            seta(a) {
+                this.a = a;
+            }
+            setb(b) {
+                this.b = b;
+            }
+            setc(c) {
+                this.c = c;
+            }
+            setd(d) {
+                this.d = d;
+            }
+            sete(e) {
+                this.e = e;
+            }
+            setf(f) {
+                this.f = f;
+            }
         }
-        else {
-            console.log('Agilead');
-        }
+
     </script>
 </body>
 

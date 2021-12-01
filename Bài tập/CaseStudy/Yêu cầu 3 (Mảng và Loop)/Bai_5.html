@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Đặt thức uống</title>
+</head>
+
+<body>
+
+    <script>
+        var menu = [
+            {
+                id: 1,
+                name: "Cafe",
+                price: 50000
+            },
+            {
+                id: 2,
+                name: "Cam vắt",
+                price: 20000
+            },
+            {
+                id: 3,
+                name: "Nước ép cà rốt",
+                price: 10000
+            },
+            {
+                id: 4,
+                name: "Nước ép cà chua",
+                price: 10000
+            },
+            {
+                id: 5,
+                name: "Nước lọc",
+                price: 10000
+            },
+            {
+                id: 6,
+                name: "Nước dừa",
+                price: 10000
+            }
+        ];
+        var total = 0;
+        do {
+            var choice = prompt("Chọn thức uống: \n 1. Cafe \n 2. Cam vắt \n 3. Nước ép cà rốt \n 4. Nước ép cà chua \n 5. Nước lọc \n 6. Nước dừa \n 7. Thoát");
+            if (choice == 1) {
+                var quantity = prompt("Nhập số lượng");
+                total += menu[0].price * quantity;
+                //alert("Tổng tiền: " + total);
+            } else if (choice == 2) {
+                var quantity = prompt("Nhập số lượng");
+                total += menu[1].price * quantity;
+                //alert("Tổng tiền: " + total);
+            } else if (choice == 3) {
+                var quantity = prompt("Nhập số lượng");
+                total += menu[2].price * quantity;
+                //alert("Tổng tiền: " + total);
+            } else if (choice == 4) {
+                var quantity = prompt("Nhập số lượng");
+                total += menu[3].price * quantity;
+                //alert("Tổng tiền: " + total);
+            } else if (choice == 5) {
+                var quantity = prompt("Nhập số lượng");
+                total += menu[4].price * quantity;
+                //alert("Tổng tiền: " + total);
+            } else if (choice == 6) {
+                var quantity = prompt("Nhập số lượng");
+                total += menu[5].price * quantity;
+                //alert("Tổng tiền: " + total);
+            } else if (choice == 7) {
+                alert("Tổng tiền: " + total);
+            } else {
+                alert("Nhập sai");
+            }
+        } while (choice != 7);
+
+    </script>
+</body>
+
+</html>

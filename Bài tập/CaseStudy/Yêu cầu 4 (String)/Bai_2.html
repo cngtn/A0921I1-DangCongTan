@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Đặt thức uống</title>
+</head>
+
+<body>
+    <script>
+        // Cho xâu kí tự.Hãy đếm số lượng kí tự khác nhau trong xâu đó
+        // Ví dụ: s = "cabca",Có 3 kí tự khác nhau là a, b và c thì kết quả differentSymbolsNaive(s) = 3.
+        // Hãy dùng hàm differentSymbolsNaive(s) để tính toán số lượng kí tự khác nhau trong xâu s.
+        function differentSymbolsNaive(s) {
+            var count = 0;
+            for (var i = 0; i < s.length; i++) {
+                for (var j = i + 1; j < s.length; j++) {
+                    if (s[i] === s[j]) {
+                        count++;
+                    }
+                }
+            }
+            return s.length - count;
+        }
+        let s = prompt("Nhập vào xâu kí tự.")
+        alert(differentSymbolsNaive(s));
+    </script>
+</body>
+
+</html>

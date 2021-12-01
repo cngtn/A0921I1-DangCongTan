@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Bài 1</title>
+</head>
+
+<body>
+    <script>
+        let a = [];
+        let b = [];
+        let n = prompt("Nhập số phần tử của mảng: ");
+        let i;
+        for (i = 0; i < n; i++) {
+            a[i] = prompt("Nhập phần tử thứ " + (i + 1) + ": ");
+        }
+        document.write("Mảng vừa nhập: " + a + "<br>");
+        for (let i = 0; i < n; i++) {
+            let flag = true;
+            for (let j = 2; j < a[i]; j++) {
+                if (a[i] % j == 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag) {
+                b[b.length] = a[i];
+            }
+        }
+        document.write("Mảng các số nguyên tố: " + b);
+    </script>
+</body>
+
+</html>

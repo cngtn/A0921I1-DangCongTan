@@ -1,0 +1,32 @@
+<!-- Viết hàm tính tổng các số chẵn trong ma trận có kích thước m*n. Với m, n là các số nhập từ bàn phím. -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Đặt thức uống</title>
+</head>
+
+<body>
+    <script>
+        function tinhTongSoChan(m, n) {
+            let tong = 0;
+            for (let i = 0; i < m; i++) {
+                for (let j = 0; j < n; j++) {
+                    let so = parseInt(prompt("Nhập số thứ " + (i * n + j + 1)));
+                    if (so % 2 == 0) {
+                        tong += so;
+                    }
+                }
+            }
+            return tong;
+        }
+        let m = parseInt(prompt("Nhập m."));
+        let n = parseInt(prompt("Nhập n."));
+        let tong = tinhTongSoChan(m, n);
+        alert("Tổng các số chẵn trong ma trận là: " + tong);
+    </script>
+</body>
+
+</html>
